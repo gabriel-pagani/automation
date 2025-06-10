@@ -2,7 +2,6 @@ import pyautogui
 
 
 def smart_click(x: int = None, y: int = None, image_path: str = None, flag_path: str = None, confidence: int = 0.90):
-    """Clicks on a specified position or image on the screen with optional flag checking."""
     while True:
         try:
             if x is not None and y is not None and not flag_path:

@@ -1,3 +1,0 @@
-import smart_functions as sf
-
-...
