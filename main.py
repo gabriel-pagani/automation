@@ -1,7 +1,8 @@
 from core.data_extractor import data_extractor
 from core.data_formatter import data_formatter
+from core.bot import bot
 
-x = (data_formatter(data_extractor(r'pdfs/sinasc.pdf')))
 
-for k, v in x.items():
-    print(f'{k}: {v}')
+formatted_data = (data_formatter(data_extractor(r'assets\pdfs\sinasc.pdf')))
+
+bot(formatted_data=formatted_data, clifor='C19000', insc_est='1234567890')
