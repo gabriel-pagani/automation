@@ -6,7 +6,7 @@ import time
 import os
 
 
-FOLDER = r'C:\Users\gabriel.souza\Documents'
+FOLDER = r'\\serverfile\users\Tecnologia\Softwares\Windows\automation\assets\pdfs'
 
 
 def get_codes() -> dict:
@@ -46,9 +46,8 @@ def monitor_folder() -> None:
             files = os.listdir(FOLDER)
             print('Monitorado Diretório...')
             for file in files:
-                print('Processando Arquivos...')
                 codes = get_codes()
-                if (file.lower().endswith('.pdf') and (file.lower().startswith('c') or file.upper().startswith('f'))):
+                if (file.lower().endswith('.pdf') and (file.lower().startswith('c') or file.lower().startswith('f'))):
                     process_file(file=file, codes=codes)
             time.sleep(1)
 
