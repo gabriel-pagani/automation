@@ -1,8 +1,4 @@
-from core.data_extractor import data_extractor
-from core.data_formatter import data_formatter
-from core.bot import bot
+from core.folder_manager import monitor_folder
 
-
-formatted_data = (data_formatter(data_extractor(r'assets\pdfs\sinasc.pdf')))
-
-bot(formatted_data=formatted_data, clifor='C19000', insc_est='1234567890')
+if __name__ == '__name__':
+    monitor_folder()

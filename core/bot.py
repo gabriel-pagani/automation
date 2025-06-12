@@ -94,14 +94,14 @@ def bot(formatted_data: dict, clifor: str, insc_est: str = None) -> None:
 
     pyautogui.write(formatted_data['Email'])
 
-    if insc_est:
+    if insc_est and 'x' not in insc_est.lower():
         smart_pyautogui.smart_click(image_path=r'assets\images\tributos.png')
         smart_pyautogui.smart_click(image_path=r'assets\images\tipo_contribuinte.png')
         
         if 'I' in insc_est.upper():
             pyautogui.press('up')
             pyautogui.press('tab')
-        else:
+        elif insc_est.isdigit():
             pyautogui.press('up', presses=2)
             pyautogui.press('tab')
 
