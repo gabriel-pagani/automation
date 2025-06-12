@@ -6,7 +6,7 @@ import time
 import os
 
 
-FOLDER = r'\\serverfile\users\Tecnologia\Softwares\Windows\register-automation\assets\docs'
+FOLDER = r'C:\Users\gabriel.souza\Documents'
 
 
 def get_codes() -> dict:
@@ -54,5 +54,3 @@ def monitor_folder() -> None:
 
     except Exception:
         None
-
-print(get_codes())
