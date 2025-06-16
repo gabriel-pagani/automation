@@ -105,8 +105,6 @@ def bot(formatted_data: dict, clifor: str, insc_est: str = None) -> None:
             pyautogui.press('up', presses=2)
             pyautogui.press('tab')
 
-        smart_pyautogui.smart_click(image_path=r'\\serverfile\users\Tecnologia\Softwares\Windows\automation\assets\images\identificacao.png')
-
     # Salva o cadastro
     smart_pyautogui.smart_click(image_path=r'\\serverfile\users\Tecnologia\Softwares\Windows\automation\assets\images\salvar.png')
 
