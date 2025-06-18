@@ -44,13 +44,13 @@ def monitor_folder() -> None:
     try:
         while True:
             files = os.listdir(FOLDER)
-            os.system("clear")
+            os.system("cls")
             print('Monitorado Diretório.')
             time.sleep(0.5)
-            os.system("clear")
+            os.system("cls")
             print('Monitorado Diretório..')
             time.sleep(0.5)
-            os.system("clear")
+            os.system("cls")
             print('Monitorado Diretório...')
             if files:
                 print('Arquivos Detectados. A Automação Iniciada!')
