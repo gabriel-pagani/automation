@@ -44,7 +44,16 @@ def monitor_folder() -> None:
     try:
         while True:
             files = os.listdir(FOLDER)
+            os.system("clear")
+            print('Monitorado Diretório.')
+            time.sleep(0.5)
+            os.system("clear")
+            print('Monitorado Diretório..')
+            time.sleep(0.5)
+            os.system("clear")
             print('Monitorado Diretório...')
+            if files:
+                print('Arquivos Detectados. A Automação Iniciada!')
             for file in files:
                 codes = get_codes()
                 if (file.lower().endswith('.pdf') and (file.lower().startswith('c') or file.lower().startswith('f'))):
