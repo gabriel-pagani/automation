@@ -53,7 +53,8 @@ def monitor_folder() -> None:
             os.system("cls")
             print('Monitorado Diretório...')
             if files:
-                print('Arquivos Detectados. A Automação Iniciada!')
+                os.system("cls")
+                print('Arquivos Detectados. Automação Iniciada!')
             for file in files:
                 codes = get_codes()
                 if (file.lower().endswith('.pdf') and (file.lower().startswith('c') or file.lower().startswith('f'))):
