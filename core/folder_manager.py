@@ -44,14 +44,10 @@ def monitor_folder() -> None:
     try:
         while True:
             files = os.listdir(FOLDER)
-            os.system("cls")
-            print('Monitorado Diretório.')
-            time.sleep(0.5)
-            os.system("cls")
-            print('Monitorado Diretório..')
-            time.sleep(0.5)
-            os.system("cls")
-            print('Monitorado Diretório...')
+            for i in range(3):
+                os.system("clear")
+                print('Monitorado Diretório' + '.' * (i + 1))
+                time.sleep(0.5)
             if files:
                 os.system("cls")
                 print('Arquivos Detectados. Automação Iniciada!')
@@ -59,7 +55,6 @@ def monitor_folder() -> None:
                 codes = get_codes()
                 if (file.lower().endswith('.pdf') and (file.lower().startswith('c') or file.lower().startswith('f'))):
                     process_file(file=file, codes=codes)
-            time.sleep(1)
 
     except Exception:
         None
