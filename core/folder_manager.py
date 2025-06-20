@@ -45,7 +45,7 @@ def monitor_folder() -> None:
         while True:
             files = os.listdir(FOLDER)
             for i in range(3):
-                os.system("clear")
+                os.system("cls")
                 print('Monitorado Diretório' + '.' * (i + 1))
                 time.sleep(0.5)
             if files:
