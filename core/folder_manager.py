@@ -42,12 +42,11 @@ def process_file(file: str, codes: dict) -> None:
 
 def monitor_folder() -> None:
     try:
-        while True:
-            files = os.listdir(FOLDER)
-            for file in files:
-                codes = get_codes()
-                if (file.lower().endswith('.pdf') and (file.lower().startswith('c') or file.lower().startswith('f'))):
-                    process_file(file=file, codes=codes)
+        files = os.listdir(FOLDER)
+        for file in files:
+            codes = get_codes()
+            if (file.lower().endswith('.pdf') and (file.lower().startswith('c') or file.lower().startswith('f'))):
+                process_file(file=file, codes=codes)
 
     except Exception:
         None
