@@ -6,7 +6,7 @@ import time
 import os
 
 
-FOLDER = r'\\serverfile\users\Tecnologia\Softwares\Windows\automation\assets\pdfs'
+FOLDER = r'C:\Users\gabriel.souza\Documents\automation\assets\pdfs'
 
 
 def get_codes() -> dict:
