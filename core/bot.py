@@ -5,7 +5,7 @@ import time
 
 
 def bot(formatted_data: dict, clifor: str, insc_est: str = None) -> None:
-    if formatted_data['Situacao'] != 'ATIVA':
+    if formatted_data['Situacao'] == 'BAIXADA':
         return
 
     pyautogui.PAUSE = 0.3
