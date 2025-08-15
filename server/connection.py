@@ -41,4 +41,4 @@ def server_request(query: str) -> dict:
     except Exception as e:
         print(f"Request error: {e}")
 
-    return response[0]
+    return response[0] if response else None

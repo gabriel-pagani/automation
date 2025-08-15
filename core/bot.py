@@ -2,10 +2,24 @@ import pyautogui
 from core import smart_pyautogui
 import pyperclip
 import time
+from server.connection import server_request, close_connection
+
+
+def get_cnpj(cnpj: str) -> bool:
+    query = f"SELECT * FROM FCFO WHERE CGCCFO = '{cnpj}'"
+    try:
+        response = server_request(query=query)
+        close_connection()
+        return bool(response)
+    except Exception:
+        None
 
 
 def bot(formatted_data: dict, clifor: str, insc_est: str = None) -> None:
     if formatted_data['Situacao'] == 'BAIXADA':
+        return
+    
+    if get_cnpj(formatted_data['Cnpj']):
         return
 
     pyautogui.PAUSE = 0.3
