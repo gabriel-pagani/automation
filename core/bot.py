@@ -16,7 +16,7 @@ def get_cnpj(cnpj: str) -> bool:
 
 
 def bot(formatted_data: dict, clifor: str, insc_est: str = None) -> None:
-    if formatted_data['Situacao'] == 'BAIXADA' or 'INAPTA':
+    if formatted_data['Situacao'] == 'BAIXADA' or formatted_data['Situacao'] == 'INAPTA':
         return
     
     if get_cnpj(formatted_data['Cnpj']):
